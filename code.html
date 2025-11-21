@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Statistics - URL Shortener</title>
+    <meta name="description" content="View detailed statistics for your shortened link">
+    <meta property="og:title" content="Link Statistics - URL Shortener">
+    <meta property="og:description" content="View detailed statistics for your shortened link">
+    <meta name="twitter:title" content="Link Statistics - URL Shortener">
+    <meta name="twitter:description" content="View detailed statistics for your shortened link">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #dbeafe;
+            --accent-color: #1e40af;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-gray-50 text-[var(--text-primary)] font-sans;
+        }
+    }
+
+    @layer components {
+        .stat-card {
+            @apply bg-white rounded-lg shadow-sm p-6;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="utils/api.js"></script>
+    <script type="text/babel" src="code-app.js"></script>
+</body>
+</html>

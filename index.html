@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener - Dashboard</title>
+    <meta name="description" content="Shorten URLs and track clicks with our free URL shortener service">
+    <meta name="keywords" content="url shortener, link shortener, short links, analytics">
+    <meta property="og:title" content="URL Shortener - Dashboard">
+    <meta property="og:description" content="Shorten URLs and track clicks with our free URL shortener service">
+    <meta name="twitter:title" content="URL Shortener - Dashboard">
+    <meta name="twitter:description" content="Shorten URLs and track clicks with our free URL shortener service">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #dbeafe;
+            --accent-color: #1e40af;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-gray-50 text-[var(--text-primary)] font-sans;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-4 py-2 bg-[var(--primary-color)] text-white rounded-lg hover:bg-[var(--accent-color)] transition-colors font-medium;
+        }
+        .btn-secondary {
+            @apply px-4 py-2 bg-white text-[var(--text-primary)] border border-[var(--border-color)] rounded-lg hover:bg-gray-50 transition-colors font-medium;
+        }
+        .input-field {
+            @apply w-full px-4 py-2 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/AddLinkModal.js"></script>
+    <script type="text/babel" src="components/LinkTable.js"></script>
+    <script type="text/babel" src="components/Alert.js"></script>
+    <script type="text/babel" src="utils/api.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
